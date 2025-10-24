@@ -8,13 +8,12 @@ contract = load_contract(
 
 # Test from replayed transaction: https://polygonscan.com/tx/0xc909318f4c939254d608cd4964abcc287e3ea247315fe06916ca7ac86e7e0987
 
-def test_maticx_swap_matic_for_maticx_via_instantpool(backend, firmware, navigator, test_name, wallet_addr):
+def test_maticx_swap_matic_for_maticx_via_instantpool(backend, navigator, test_name, wallet_addr):
     data = "0xc78cf1a0"
     run_test(
         contract, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr,

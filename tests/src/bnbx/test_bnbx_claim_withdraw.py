@@ -8,13 +8,12 @@ contract = load_contract(
 
 # Test from replayed transaction: https://testnet.bscscan.com/tx/0x4933296ae725dbdd0e1a093fdf508f88ad22c9ae315282eccccda148405c9856
 
-def test_bnbx_claim_withdraw(backend, firmware, navigator, test_name, wallet_addr):
+def test_bnbx_claim_withdraw(backend, navigator, test_name, wallet_addr):
     data = "0xf84444360000000000000000000000000000000000000000000000000000000000000000"
     run_test(
         contract, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr,

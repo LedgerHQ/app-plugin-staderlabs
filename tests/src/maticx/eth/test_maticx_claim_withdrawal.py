@@ -7,13 +7,12 @@ contract = load_contract(
 
 # Test from replayed transaction: https://etherscan.io/tx/0xf3c639002557eafa1560159010093927560ebbb351720c279be67bd3c480d103
 
-def test_maticx_claim_withdrawal(backend, firmware, navigator, test_name, wallet_addr):
+def test_maticx_claim_withdrawal(backend, navigator, test_name, wallet_addr):
     data = "0xf84444360000000000000000000000000000000000000000000000000000000000000000"
     run_test(
         contract, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
